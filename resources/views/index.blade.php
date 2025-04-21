@@ -15,9 +15,9 @@
     <header>
         <nav>
             <i id="menu" class="fa-solid fa-bars"></i>
-            <a class="logo-link" href=""><img src="images/logo.png" alt="Logo" class="logo" /></a>
+            <a class="logo-link" href="{{ route('home') }}"><img src="images/logo.png" alt="Logo" class="logo" /></a>
             <div class="nav-links">
-                <a class="profile" href="pages/login_signup.html">
+                <a class="profile" href="#">
                     <i class="fa-solid fa-user"></i>
                     <div class="dropdown-content">
                         <a><i class="fa-solid fa-right-to-bracket"></i> Login</a>
@@ -38,8 +38,9 @@
             </div>
             <div class="sidebar-container">
                 <div class="sidebar-links">
-                    <a href="#" class="menu-links">Home</a><a href="pages/catalog.html" class="menu-links">Catalog</a><a
-                        href="pages/contact.html" class="menu-links">Contact</a>
+                    <a href="{{ route('home') }}" class="menu-links">Home</a>
+                    <a href="{{ route('catalog') }}" class="menu-links">Catalog</a>
+                    <a href="pages/contact.html" class="menu-links">Contact</a>
                 </div>
 
                 <div class="menu-buttons-container">
@@ -165,6 +166,6 @@
         </div>
     </footer>
 </body>
-<script src="scripts/script.js"></script>
+<script src="{{ asset('js/script.js') }}"></script>
 
 </html>
