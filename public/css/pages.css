@@ -1,0 +1,58 @@
+/* pages */
+.pages-section {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.pages-section a {
+  color: #dd0210;
+  text-decoration: underline;
+}
+
+.pages-section a:hover {
+  color: #dd0211a3;
+}
+
+.pages-section h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 4rem 0 2rem 0;
+  text-align: center;
+}
+
+.pages-section h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+.pages-section p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pages-section ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.pages-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.Cookies-title {
+  font-size: 2rem;
+}
+.pages-section table {
+  border-collapse: separate;
+  border-spacing: 0.5rem 1rem;
+}
+
+.pages-section table th {
+  color: #ffffff;
+  background-color: #000000;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+}
