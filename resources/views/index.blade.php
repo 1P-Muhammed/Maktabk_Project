@@ -25,7 +25,7 @@
                         <a><i class="fa-solid fa-user-plus"></i> Create Account</a>
                     </div>
                 </a>
-                <a href="pages/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="{{ route('cart.html') }}"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </nav>
         <!-- /* sidebar Section Start */ -->
@@ -167,5 +167,6 @@
     </footer>
 </body>
 <script src="{{ asset('js/script.js') }}"></script>
+
 
 </html>

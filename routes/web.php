@@ -5,7 +5,8 @@ use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class,'index'])->name('home');
-Route::get('/catalog', [CatalogController::class,'index'])->name('catalog');
+Route::get('/catalog', [CatalogController::class,'catalog'])->name('catalog');
+Route::get('/cart', [CatalogController::class,'cart'])->name('cart');
 
 
 
