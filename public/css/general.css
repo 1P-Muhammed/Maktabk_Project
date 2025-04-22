@@ -115,18 +115,20 @@ i:hover {
   color: #cccccc;
 }
 
-button {
+button , .button {
   color: #ffffff;
   border: none;
-  border-radius: 0.4rem;
+  border-radius: 0.5rem;
   background-color: #e22120;
   padding: 0.5rem 1rem;
   transition: all 0.3s;
 }
 
-button:hover {
+button:hover , .button:hover {
   box-shadow: #dd0210 0px 0px 0px 3px;
 }
+
+
 
 ul {
   list-style: none;

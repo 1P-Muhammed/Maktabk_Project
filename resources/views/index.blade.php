@@ -61,7 +61,7 @@
                     <li><a href="{{ route('search') }}">Search</a></li>
                     <li><a href="{{ route('refund_policy') }}">Refund Policy</a></li>
                     <li><a href="{{ route('privacy_policy') }}">Privacy Policy</a></li>
-                    <li><a href="{{ route('term_of_service') }}">Terms of Service</a></li>
+                    <li><a href="{{ route('terms_of_service') }}">Terms of Service</a></li>
                 </ul>
             </div>
         </section>
@@ -77,9 +77,9 @@
             <div>
                 <h1>Find Your</h1>
                 <p>Best Chair</p>
-                <button href="pages/products.html" class="btn">
+                <a class="abutton" href="{{ route('catalog') }}">
                     Shop Now تسوق الأن
-                </button>
+                </a>
             </div>
         </section>
         <!-- /* Hero Section End */ -->
@@ -105,9 +105,9 @@
                             قاعدة معدن مستوردة
                         </p>
                         <p class="price">LE 1,599.00 <s>LE 2,000.00</s></p>
-                        <button href="pages/product_details.html" class="btn">
+                        <a class="abutton" href="pages/product_details.html" class="btn">
                             <i class="fa-solid fa-cart-plus"></i> Add to Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

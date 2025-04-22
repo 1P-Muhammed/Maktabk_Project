@@ -357,7 +357,7 @@
 }
 
 
-.product-details button {
+.abutton{
   background-color: #e22120;
   color: #ffffff;
   border: none;
@@ -367,6 +367,7 @@
   cursor: pointer;
   margin-top: 2%;
   border-radius: 0.5rem;
+  text-align: center;
 }
 
 /* Catalog page */
