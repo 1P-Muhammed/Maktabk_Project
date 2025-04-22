@@ -25,7 +25,7 @@
                         <a><i class="fa-solid fa-user-plus"></i> Create Account</a>
                     </div>
                 </a>
-                <a href="{{ route('cart.html') }}"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="{{ route('cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </nav>
         <!-- /* sidebar Section Start */ -->
@@ -40,7 +40,7 @@
                 <div class="sidebar-links">
                     <a href="{{ route('home') }}" class="menu-links">Home</a>
                     <a href="{{ route('catalog') }}" class="menu-links">Catalog</a>
-                    <a href="pages/contact.html" class="menu-links">Contact</a>
+                    <a href="{{ route('contact') }}" class="menu-links">Contact</a>
                 </div>
 
                 <div class="menu-buttons-container">
