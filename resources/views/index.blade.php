@@ -58,10 +58,10 @@
                 </div>
 
                 <ul>
-                    <li><a href="pages/search.html">Search</a></li>
-                    <li><a href="pages/refund_policy.html">Refund Policy</a></li>
-                    <li><a href="pages/privacy_policy.html">Privacy Policy</a></li>
-                    <li><a href="pages/term_of_service.html">Terms of Service</a></li>
+                    <li><a href="{{ route('search') }}">Search</a></li>
+                    <li><a href="{{ route('refund_policy') }}">Refund Policy</a></li>
+                    <li><a href="{{ route('privacy_policy') }}">Privacy Policy</a></li>
+                    <li><a href="{{ route('term_of_service') }}">Terms of Service</a></li>
                 </ul>
             </div>
         </section>

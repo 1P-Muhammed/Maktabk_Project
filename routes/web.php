@@ -10,6 +10,10 @@ Route::get('/', [IndexController::class,'index'])->name('home');
 Route::get('/catalog', [CatalogController::class,'catalog'])->name('catalog');
 Route::get('/cart', [CartController::class,'cart'])->name('cart');
 Route::get('/contact', [ContactController::class,'contact'])->name('contact');
+Route::get('/search', [ContactController::class,'search'])->name('search');
+Route::get('/refund_policy', [ContactController::class,'refund_policy'])->name('refund_policy');
+Route::get('/privacy_policy', [ContactController::class,'privacy_policy'])->name('privacy_policy');
+Route::get('/term_of_service', [ContactController::class,'term_of_service'])->name('term_of_service');
 
 
 
