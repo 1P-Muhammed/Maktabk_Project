@@ -37,18 +37,21 @@
                     </div>
                 </div>
                 <div class="checkout-container">
-                    <div>
-                        <div class="checkout-sub-container">
-                            <p>Subtotal</p>
-                            <p>LE 5,098.00</p>
+                    <div class="checkout-item">
+                        <div>
+                            <div class="checkout-sub-container">
+                                <p>Subtotal</p>
+                                <p>LE 5,098.00</p>
+                            </div>
+                            <div class="checkout-sub-container make-red">
+                                <p>Total savings</p>
+                                <p>LE 1,102.00</p>
+                            </div>
                         </div>
-                        <div class="checkout-sub-container make-red">
-                            <p>Total savings</p>
-                            <p>LE 1,102.00</p>
-                        </div>
+
+                        <p class="tax-text">Taxes and shipping calculated at checkout</p>
+                        <a class="checkout-button"><i class="fa-solid fa-money-bill"></i> Checkout - LE 5,098.00</a>
                     </div>
-                    <p class="tax-text">Taxes and shipping calculated at checkout</p>
-                    <a class="checkout-button"><i class="fa-solid fa-money-bill"></i> Checkout - LE 5,098.00</a>
                 </div>
             </div>
             <div class="cart-empty-container">
@@ -56,4 +59,4 @@
                 <a class="continue-shopping-button" href="catalog.html">Continue browsing</a>
             </div>
         </section>
-@endsection
+    @endsection

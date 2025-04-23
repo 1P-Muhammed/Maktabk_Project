@@ -154,6 +154,7 @@ button,
     background-color: #e22120;
     padding: 0.5rem 1rem;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 button:hover,
@@ -366,12 +367,18 @@ textarea:hover {
 }
 
 .checkout-container {
+    position: relative;
+}
+
+.checkout-item{
     display: flex;
     flex-direction: column;
-    padding: 1rem;
     border-radius: 0.4rem;
     width: 100%;
     gap: 1rem;
+    position: sticky;
+    top: 6rem;
+    height: fit-content;
 }
 
 .checkout-sub-container {
