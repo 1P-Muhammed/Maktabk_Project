@@ -154,6 +154,7 @@ button,
     background-color: #e22120;
     padding: 0.5rem 1rem;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 button:hover,
