@@ -20,9 +20,8 @@
                 <a class="profile" href="#">
                     <i class="fa-solid fa-user"></i>
                     <div class="dropdown-content">
-                        <a><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                        <a href="{{ route('login') }}"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
                         <br />
-                        <a><i class="fa-solid fa-user-plus"></i> Create Account</a>
                     </div>
                 </a>
                 <a href="{{ route('cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -44,12 +43,8 @@
                 </div>
 
                 <div class="menu-buttons-container">
-                    <button class="menu-buttons login-button">
-                        <i class="fa-solid fa-right-to-bracket"></i> Login</button><button
-                        class="menu-buttons create-account-button">
-                        <i class="fa-solid fa-user-plus"></i>
-                        Create Account
-                    </button>
+                    <a class="menu-buttons login-button">
+                        <i class="fa-solid fa-right-to-bracket"></i> Login</a>
                 </div>
 
                 <div class="sidebar-contact">
