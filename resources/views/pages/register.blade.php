@@ -2,12 +2,12 @@
 <html lang="ar">
   <head>
     <meta charset="UTF-8" />
-    <title>CodePen - Sign up / Login Form</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href={{ asset('css/account.css') }} />
     <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
+    rel="stylesheet"
     />
+    <title>maktabk</title>
   </head>
   <body>
     <div class="main">
