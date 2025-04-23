@@ -47,7 +47,8 @@
             </div>
         </section>
         <!-- /* Categories Section End */ -->
-        <div class="feature-image" >
-        <img src="images/home.png" alt="Features"/>
-        <div>
+        <div class="feature-image">
+            <img src="images/home.png" alt="Features" />
+            <div>
+    </main>
 @endsection

@@ -50,6 +50,11 @@ header {
     position: sticky;
     top: 0rem;
     z-index: 1000;
+    transition: all 0.5s;
+}
+
+header.scrolled {
+    opacity: 0.9;
 }
 
 nav {
@@ -171,6 +176,16 @@ ul {
     opacity: 1;
     pointer-events: auto;
     bottom: -250%;
+}
+
+/* .search-visibility {
+    display: none;
+} */
+
+.search-visibility p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 /* Cart */
