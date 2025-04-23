@@ -7,10 +7,11 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PrivacyPolicyController;
 use App\Http\Controllers\ProductDetailsController;
 use App\Http\Controllers\RefundPolicyController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TermsOfServiceController;
 use Illuminate\Support\Facades\Route;
-
+Route::post('/login',[RegisterController::class, 'login'])->name('login');
 Route::get('/', [IndexController::class,'index'])->name('home');
 Route::get('/catalog', [CatalogController::class,'catalog'])->name('catalog');
 Route::get('/cart', [CartController::class,'cart'])->name('cart');
