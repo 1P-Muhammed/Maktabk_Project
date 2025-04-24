@@ -10,10 +10,7 @@
 
                 <div class="catalog-item">
                     <div class="catalog-img-container">
-                        {{-- @foreach ($images as $image) --}}
-                            {{-- @dd($image) --}}
-                            <img src="{{ $catalog->images }}" alt="Product 1" />
-                        {{-- @endforeach --}}
+                            <img src="{{ $catalog->image }}" alt="Product 1" />
                         <p class="catalog-img-save">
                             <i class="fa-solid fa-tag"></i> Save LE 451.00
                         </p>
@@ -24,7 +21,7 @@
                             <p>LE {{ $catalog->discount_price }}</p>
                             <p class="price">LE {{ $catalog->price }}</p>
                         </div>
-                        <button>Buy</button>
+                        <a href="{{ route('product_details') }}">Buy</a">
                     </div>
                 </div>
                 @endforeach
