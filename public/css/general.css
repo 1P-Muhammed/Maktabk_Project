@@ -99,8 +99,8 @@ nav i {
     background-color: #ffffff;
     border-radius: 0.4rem;
     font-size: 1.2rem;
-    bottom: -150%;
-    width: 14rem;
+    bottom: 50%;
+    width: 10rem;
     left: -20%;
     transition: all 0.3s;
     z-index: 1000;
@@ -118,6 +118,18 @@ nav i {
 
 .dropdown-content a:hover {
     color: #00000089;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-quantity-counter {
+    position: absolute;
+    color: #ffffff;
+    font-size: 0.8rem;
+    right: -10%;
+    top: 8%;
 }
 
 section {
@@ -176,7 +188,7 @@ ul {
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
-    bottom: -250%;
+    bottom: -130%;
 }
 
 /* .search-visibility {
@@ -370,7 +382,7 @@ textarea:hover {
     position: relative;
 }
 
-.checkout-item{
+.checkout-item {
     display: flex;
     flex-direction: column;
     border-radius: 0.4rem;

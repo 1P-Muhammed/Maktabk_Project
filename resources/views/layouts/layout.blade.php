@@ -21,10 +21,10 @@
                     <i class="fa-solid fa-user"></i>
                     <div class="dropdown-content">
                         <a href="{{ route('login') }}"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
-                        <br />
                     </div>
                 </a>
-                <a href="{{ route('cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a class="cart-icon" href="{{ route('cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
+                <P class="cart-quantity-counter">{{'0'}}</P>
             </div>
         </nav>
         <!-- /* sidebar Section Start */ -->
