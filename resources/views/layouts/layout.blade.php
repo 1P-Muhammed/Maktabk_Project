@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href={{ asset('css/general.css') }} />
-    <link rel="stylesheet" href={{ asset('css/style.css') }} />
-    <link rel="stylesheet" href={{ asset('css/pages.css') }} />
+    <link rel="stylesheet" href="{{ asset('css/general.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/pages.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
     <title>maktabk</title>
@@ -16,7 +16,8 @@
     <header>
         <nav>
             <i id="menu" class="fa-solid fa-bars"></i>
-            <a class="logo-link" href="{{ route('home') }}"><img src="images/logo.png" alt="Logo" class="logo" /></a>
+            <a class="logo-link" href="{{ route('home') }}"><img src="images/logo.png" alt="Logo"
+                    class="logo" /></a>
             <div class="nav-links">
                 <a class="profile" href="#">
                     <i class="fa-solid fa-user"></i>
@@ -25,10 +26,11 @@
                     </div>
                 </a>
                 <a class="cart-icon" href="{{ route('cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
-                <P class="cart-quantity-counter">{{'0'}}</P>
+                <P class="cart-quantity-counter">{{ '0' }}</P>
             </div>
         </nav>
         <!-- /* sidebar Section Start */ -->
+        <div id="overlay"></div>
         <section class="sidebar">
             <div class="sidebar-header">
                 <p class="sidebar-menu-icon">
@@ -45,7 +47,8 @@
 
                 <div class="menu-buttons-container">
                     <a class="menu-buttons login-button">
-                        <i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                        <i class="fa-solid fa-right-to-bracket"></i> Login
+                    </a>
                 </div>
 
                 <div class="sidebar-contact">
@@ -63,58 +66,58 @@
         </section>
         <!-- /* /* sidebar Section End */ -->
     </header>
-        @yield('content')
-        <!-- /* Features Section Start */ -->
-        <section class="features">
-            <div class="feature-list">
-                <div class="feature-item">
-                    <i class="fa-solid fa-thumbs-up"></i>
-                    <h3>Hassle-Free Returns</h3>
+    @yield('content')
+    <!-- /* Features Section Start */ -->
+    <section class="features">
+        <div class="feature-list">
+            <div class="feature-item">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <h3>Hassle-Free Returns</h3>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-calendar-days"></i>
+                <h3>6 Months Warranty</h3>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-check"></i>
+                <h3>100% Satisfaction Guaranteed</h3>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-headset"></i>
+                <h3>Customer Service</h3>
+            </div>
+        </div>
+    </section>
+    <!-- /* Features Section End */ -->
+    </main>
+    <footer>
+        <div class="footer-width">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <h3>About Us</h3>
+                    <p class="about-text">
+                        MakTaBk is designed to take away your aches, pains and improve
+                        your overall body comfort, getting you feeling your best!
+                    </p>
+                    <p>
+                        Email:
+                        <a href="mailto:rahhacraft@gmail.com">rahhacraft@gmail.com</a>
+                    </p>
+                    <p>Phone: <a href="tel:01098611085">01098611085</a></p>
                 </div>
-                <div class="feature-item">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    <h3>6 Months Warranty</h3>
-                </div>
-                <div class="feature-item">
-                    <i class="fa-solid fa-check"></i>
-                    <h3>100% Satisfaction Guaranteed</h3>
-                </div>
-                <div class="feature-item">
-                    <i class="fa-solid fa-headset"></i>
-                    <h3>Customer Service</h3>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
                 </div>
             </div>
-        </section>
-        <!-- /* Features Section End */ -->
-        </main>
-        <footer>
-            <div class="footer-width">
-                <div class="footer-container">
-                    <div class="footer-about">
-                        <h3>About Us</h3>
-                        <p class="about-text">
-                            MakTaBk is designed to take away your aches, pains and improve
-                            your overall body comfort, getting you feeling your best!
-                        </p>
-                        <p>
-                            Email:
-                            <a href="mailto:rahhacraft@gmail.com">rahhacraft@gmail.com</a>
-                        </p>
-                        <p>Phone: <a href="tel:01098611085">01098611085</a></p>
-                    </div>
-                    <div class="footer-links">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="#">Search</a></li>
-                            <li><a href="#">Refund Policy</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <p class="copy-right">&copy; Copyright © 2025 <a>Maktabk</a></p>
-            </div>
-        </footer>
+            <p class="copy-right">&copy; Copyright © 2025 <a>Maktabk</a></p>
+        </div>
+    </footer>
 </body>
 <script src="{{ asset('js/script.js') }}"></script>
 
