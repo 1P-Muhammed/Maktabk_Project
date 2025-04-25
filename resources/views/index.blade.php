@@ -11,7 +11,7 @@
             <div>
                 <h1>Find Your</h1>
                 <p>Best Chair</p>
-                <a class="abutton" href="{{ route('catalog') }}">
+                <a class="button" href="{{ route('catalog') }}">
                     Shop Now تسوق الأن
                 </a>
             </div>

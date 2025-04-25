@@ -1,6 +1,7 @@
 const menuOpen = document.getElementById("menu");
 const menuClose = document.getElementById("close");
 const menu = document.querySelector(".sidebar");
+const overlay = document.getElementById("overlay");
 const profile = document.querySelector(".profile");
 const dropdown = document.querySelector(".dropdown-content");
 
@@ -31,10 +32,12 @@ dropdown.addEventListener("mouseleave", () => {
 menuOpen.addEventListener("click", function (event) {
     event.stopPropagation();
     menu.classList.toggle("view");
+    overlay.classList.toggle("view");
 });
 
 menuClose.addEventListener("click", function (event) {
     menu.classList.remove("view");
+    overlay.classList.remove("view");
 });
 
 document.addEventListener("click", function (event) {
@@ -44,7 +47,13 @@ document.addEventListener("click", function (event) {
         menu.classList.contains("view")
     ) {
         menu.classList.remove("view");
+        overlay.classList.remove("view");
     }
+});
+
+overlay.addEventListener("click", function () {
+    menu.classList.remove("view");
+    overlay.classList.remove("view");
 });
 
 // image handler

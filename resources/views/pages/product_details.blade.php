@@ -31,19 +31,21 @@
             <div>
                 <div class="product-full-details">
                     كرسى مدير جلد ظهر عالى يدات ستانلس ماكينة طيارة نجمة استانلس متاح
+
                     بأكثر من لون مزودة بمكينة للتحكم فى ارتفاع الكرسى عن الارض مزودة
+
                     بمسند رأس متحرك مع دوران ثلث 360 درجة
                 </div>
                 <div class="customer-reviews">
                     <h2>Don't Just Take Our Word For It!</h2>
                     Hear from your returning customers!
-                    <img src="../images/customer.png" alt="Customer" />
+                    <img src="images/customer.png" alt="Customer" />
                     I bought a chair from Maktabk it was realy amazing and was realy
                     High quality material
                     <span>- MaZen</span>
                 </div>
                 <div class="overview">
-                    <div><img src="../images/cat.png" /></div>
+                    <div><img src="images/cat.png" /></div>
                     <div>
                         <h2>Maktabk is The Best</h2>
                         <p>

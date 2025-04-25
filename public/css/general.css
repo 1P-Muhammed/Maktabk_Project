@@ -23,11 +23,6 @@ body {
     overflow-x: hidden;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 input {
     padding: 1rem;
     border: none;
@@ -97,6 +92,7 @@ nav i {
     position: absolute;
     padding: 1rem;
     background-color: #ffffff;
+    box-shadow: 0px 0px 10px 1px #00000048;
     border-radius: 0.4rem;
     font-size: 1.2rem;
     bottom: 50%;
@@ -130,6 +126,21 @@ nav i {
     font-size: 0.8rem;
     right: -10%;
     top: 8%;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;  /* Initially hidden */
+    z-index: 999;   /* Ensure overlay is above other content */
+}
+
+#overlay.view {
+    display: block;  /* Show overlay when menu is open */
 }
 
 section {
@@ -167,11 +178,13 @@ button,
     padding: 0.5rem 1rem;
     transition: all 0.3s;
     cursor: pointer;
+    text-align: center;
 }
 
 button:hover,
 .button:hover {
     box-shadow: #dd0210 0px 0px 0px 3px;
+    color: #ffffff;
 }
 
 ul {
