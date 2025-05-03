@@ -1,0 +1,199 @@
+:root {
+    --clr-bg: #f0f2f5;
+    --clr-card: #ffffff;
+    --clr-primary: #1a202c; /* dark charcoal */
+    --clr-accent: #2563eb; /* bright blue */
+    --clr-muted: #6b7280; /* gray‑600 */
+    --clr-shadow: rgba(0, 0, 0, 0.201);
+}
+
+html{
+    overflow-x: hidden;
+
+}
+
+body {
+    font-family: "Inter", sans-serif; /* modern, highly legible */
+    line-height: 1.6;
+    color: var(--clr-primary);
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+label,
+input,
+button {
+    font-size: 1rem;
+}
+
+.small {
+    font-size: 0.875rem;
+    color: var(--clr-muted);
+}
+
+.checkout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 1rem;
+    margin: 3rem auto;
+}
+.card {
+    background: var(--clr-card);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 8px var(--clr-shadow);
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.secure {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+fieldset {
+    padding: 0.5rem;
+}
+
+form label {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+    background: #d35400;
+}
+
+.cart-header,
+.cart-items li {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.cart-items li img,
+.cart-items li span,
+.cart-items li div,
+.cart-items li .line-total {
+    width: 100%;
+}
+
+.cart-header {
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-items {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 4px;
+    gap: 0.5rem;
+    /* overflow: hidden; */
+}
+
+.quantity-control input {
+    width: 50px;
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 0.4rem;
+}
+
+.features {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .checkout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    /* 1. Hide the header row so each item stands alone */
+    .cart-header {
+      display: none;
+    }
+
+    /* 2. Make each <li> a one‑column grid (i.e. vertical stack) */
+    .cart-items li {
+      display: grid;
+      grid-template-columns: 1fr; /* single column */
+      grid-auto-rows: auto;
+      row-gap: 0.75rem;
+      padding: 0.75rem 0;
+    }
+
+    /* 3. Ensure image, description, qty-control, and price each occupy full width */
+    .cart-items li img,
+    .cart-items li span,
+    .cart-items li .quantity-control,
+    .cart-items li .line-total {
+      grid-column: 1;
+      width: 100%;
+    }
+
+    /* 4. Center the product image in its row */
+    .cart-items li img {
+      justify-self: center;
+    }
+
+    /* 5. Stack the cost summary vertically */
+    .cost-summary {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
