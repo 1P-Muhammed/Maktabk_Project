@@ -23,7 +23,7 @@
                 <div class="catalog-item">
                     <div class="catalog-img-container">
                         <img src="../images/product/1.png" alt="Product 1" />
-                        <p class="catalog-img-save">
+                        <p class="catalog-icon-save">
                             <i class="fa-solid fa-tag"></i> Save LE 451.00
                         </p>
                     </div>
@@ -33,7 +33,7 @@
                             <p>LE 1,599.00</p>
                             <p class="price">LE 2,000.00</p>
                         </div>
-                        <button>Buy</button>
+                        <button>Add to Cart</button>
                     </div>
                 </div>
                 <!-- item end -->
