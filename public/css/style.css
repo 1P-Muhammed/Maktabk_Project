@@ -336,7 +336,7 @@
     position: absolute;
     top: 0%;
     left: 0%;
-    font-size: 0.8rem;
+    font-size: 0.8rem !important;
     font-weight: 600;
     padding: 0rem 0.2rem;
     border-radius: 0.4rem;
@@ -344,7 +344,7 @@
     background-color: #000000;
 }
 
-.catalog-img-save i {
+.catalog-icon-save i {
     color: #ffffff;
     font-size: 0.8rem;
 }
