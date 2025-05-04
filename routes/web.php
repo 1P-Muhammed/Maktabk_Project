@@ -21,6 +21,7 @@ Route::post('/login', [RegisterController::class, 'login'])->name('login');
 Route::get('/', [IndexController::class, 'index'])->name('home');
 Route::get('/catalog', [CatalogController::class, 'catalog'])->name('catalog');
 Route::get('/cart', [CartController::class, 'cart'])->name('cart');
+Route::get('/cart2', [CartController::class, 'cart2'])->name('cart2');
 Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 Route::get('/search', [SearchController::class, 'search'])->name('search');
 Route::get('/refund_policy', [RefundPolicyController::class, 'refund_policy'])->name('refund_policy');
