@@ -108,10 +108,10 @@
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#">Search</a></li>
-                        <li><a href="#">Refund Policy</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="{{ route('search') }}">Search</a></li>
+                        <li><a href="{{ route('refund_policy') }}">Refund Policy</a></li>
+                        <li><a href="{{ route('privacy_policy') }}">Privacy Policy</a></li>
+                        <li><a href="{{ route('terms_of_service') }}">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
