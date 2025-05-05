@@ -28,30 +28,3 @@ Route::get('/refund_policy', [RefundPolicyController::class, 'refund_policy'])->
 Route::get('/privacy_policy', [PrivacyPolicyController::class, 'privacy_policy'])->name('privacy_policy');
 Route::get('/terms_of_service', [TermsOfServiceController::class, 'terms_of_service'])->name('terms_of_service');
 Route::get('/product_details', [ProductDetailsController::class, 'product_details'])->name('product_details');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
