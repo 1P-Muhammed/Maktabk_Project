@@ -22,7 +22,14 @@
                 <a class="profile" href="#">
                     <i class="fa-solid fa-user"></i>
                     <div class="dropdown-content">
-                        <a href="{{ route('login') }}"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                        @auth
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+                            </form>
+                        @else
+                            <a href="{{ route('register') }}"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                        @endauth
                     </div>
                 </a>
                 <a class="cart-icon" href="{{ route('cart') }}"><i class="fa-solid fa-cart-shopping">
@@ -47,9 +54,14 @@
                 </div>
 
                 <div class="menu-buttons-container">
-                    <a class="menu-buttons login-button">
-                        <i class="fa-solid fa-right-to-bracket"></i> Login
-                    </a>
+                    @auth
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+                        </form>
+                        @else
+                                <a href="{{ route('register') }}"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                        @endauth
                 </div>
 
                 <div class="sidebar-contact">
