@@ -20,6 +20,7 @@ Route::post('/logout', [RegisterController::class, 'logout'])->name('logout');
 
 
 Route::get('/', [IndexController::class, 'index'])->name('home');
+Route::get('/home', [IndexController::class, 'index'])->name('home');
 Route::get('/catalog', [CatalogController::class, 'catalog'])->name('catalog');
 Route::get('/cart', [CartController::class, 'cart'])->name('cart');
 Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
