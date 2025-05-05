@@ -9,9 +9,17 @@
                     <div class="catalog-item">
                         <div class="catalog-img-container">
                             <img src="{{ $catalog->image }}" alt="Product 1" />
-                            <p class="catalog-icon-save">
-                                <i class="fa-solid fa-tag"></i> Save LE 451.00
-                            </p>
+                            @php
+                            // Remove any non-numeric characters and convert to float
+                            $original = floatval(preg_replace('/[^\d.]/', '', $catalog->price));
+                            $discount = floatval(preg_replace('/[^\d.]/', '', $catalog->discount_price));
+                            $savings = $original - $discount;
+                        @endphp
+
+                        <p class="catalog-icon-save">
+                            <i class="fa-solid fa-tag"></i>
+                            Save LE {{ number_format($savings, 2) }}
+                        </p>
                         </div>
                         <div class="catalog-item-info">
                             <h2> {{ $catalog->name }} </h2>
