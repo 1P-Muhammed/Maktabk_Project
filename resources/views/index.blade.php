@@ -25,7 +25,9 @@
             </div>
             <div class="product-list">
                 <div class="product-container">
-                    <img id="main-image" src="images/product/1.png" alt="Chair 1" />
+                    <div class="main-image">
+                        <img id="main-image" src="images/product/1.png" alt="Chair 1" />
+                    </div>
                     <div class="product-images">
                         <img src="images/product/1.png" alt="Chair 1" />
                         <img src="images/product/2.png" alt="Chair 1" />
