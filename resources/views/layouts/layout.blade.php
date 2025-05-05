@@ -32,8 +32,9 @@
                         @endauth
                     </div>
                 </a>
-                <a class="cart-icon" href="{{ route('cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
-                <P class="cart-quantity-counter">{{ '0' }}</P>
+                <a class="cart-icon" href="{{ route('cart') }}"><i class="fa-solid fa-cart-shopping">
+                        <P class="cart-quantity-counter">{{ '0' }}</P>
+                    </i></a>
             </div>
         </nav>
         <!-- /* sidebar Section Start */ -->

@@ -88,3 +88,11 @@ window.addEventListener("scroll", function () {
         header.classList.remove("scrolled");
     }
 });
+const main = document.querySelector('main');
+[...main.querySelectorAll('*')].forEach(el => {
+  const rect = el.getBoundingClientRect();
+  if (rect.right > window.innerWidth) {
+    console.warn('Overflowing element:', el, rect.right);
+  }
+});
+
