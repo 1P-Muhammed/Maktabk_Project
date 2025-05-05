@@ -10,4 +10,8 @@ class CartController extends Controller
     {
         return view("pages.cart");
     }
+    public function cart2()
+    {
+        return view("pages.cart2");
+    }
 }

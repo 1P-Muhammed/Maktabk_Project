@@ -22,9 +22,9 @@
                             <p>0</p>
                             <i class="fa-solid fa-plus"></i>
                         </div>
-                        <button href="pages/product_details.html" class="btn">
+                        <a href="{{ route('cart2') }}" class="button" class="btn">
                             <i class="fa-solid fa-cart-plus"></i> Add to Cart
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
