@@ -553,6 +553,10 @@
         justify-content: center;
     }
 
+    .form-group-row{
+        flex-direction: column;
+    }
+
     .product-container{
         height: 30rem;
     }
