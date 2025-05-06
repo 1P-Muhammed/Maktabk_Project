@@ -15,26 +15,31 @@
 <body>
     <header>
         <nav>
-            <i id="menu" class="fa-solid fa-bars"></i>
-            <a class="logo-link" href="{{ route('home') }}"><img src="images/logo.png" alt="Logo"
-                    class="logo" /></a>
-            <div class="nav-links">
-                <a class="profile" href="#">
-                    <i class="fa-solid fa-user"></i>
-                    <div class="dropdown-content">
-                        @auth
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
-                                <button type="submit"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
-                            </form>
-                        @else
-                            <a href="{{ route('register') }}"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
-                        @endauth
-                    </div>
-                </a>
-                <a class="cart-icon" href="{{ route('cart') }}"><i class="fa-solid fa-cart-shopping">
-                        <P class="cart-quantity-counter">{{ '0' }}</P>
-                    </i></a>
+            <div class="nav-container">
+                <i id="menu" class="fa-solid fa-bars"></i>
+                <a class="logo-link" href="{{ route('home') }}"><img src="images/logo.png" alt="Logo"
+                        class="logo" /></a>
+                <div class="nav-links">
+                    <a class="profile" href="#">
+                        <i class="fa-solid fa-user"></i>
+                        <div class="dropdown-content">
+                            @auth
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <a href="#" class="logout-link"
+                                        onclick="event.preventDefault(); this.closest('form').submit();">
+                                        <i class="fa-solid fa-right-from-bracket"></i> Logout
+                                    </a>
+                                </form>
+                            @else
+                                <a href="{{ route('register') }}"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                            @endauth
+                        </div>
+                    </a>
+                    <a class="cart-icon" href="{{ route('cart') }}"><i class="fa-solid fa-cart-shopping">
+                            <P class="cart-quantity-counter">{{ '0' }}</P>
+                        </i></a>
+                </div>
             </div>
         </nav>
         <!-- /* sidebar Section Start */ -->
@@ -57,11 +62,15 @@
                     @auth
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <button type="submit"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+                            <a href="#" class="abutton"
+                                onclick="event.preventDefault(); this.closest('form').submit();">
+                                <i class="fa-solid fa-right-from-bracket"></i> Logout
+                            </a>
                         </form>
-                        @else
-                                <a href="{{ route('register') }}"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
-                        @endauth
+                    @else
+                        <a class="abutton" href="{{ route('register') }}"><i class="fa-solid fa-right-to-bracket"></i>
+                            Login</a>
+                    @endauth
                 </div>
 
                 <div class="sidebar-contact">
