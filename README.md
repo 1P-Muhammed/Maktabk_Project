@@ -7,11 +7,17 @@
 </h1>
 
 <p align="center">
-  <a href="#features">Features</a> •
-  <a href="#pages">Pages</a> •
-  <a href="#tech-stack">Tech Stack</a> •
-  <a href="#installation">Installation</a> •
-  <a href="#contributing">Contributing</a>
+  <img src="https://img.shields.io/badge/Laravel-8.x-red?style=flat-square" />
+  <img src="https://img.shields.io/badge/PHP-8.x-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" />
+</p>
+
+<p align="center">
+  <a href="#-features">Features</a> •
+  <a href="#-pages">Pages</a> •
+  <a href="#-tech-stack">Tech Stack</a> •
+  <a href="#-installation">Installation</a> •
+  <a href="#-contributing">Contributing</a>
 </p>
 
 ---
@@ -59,13 +65,15 @@ erDiagram
     decimal discount_price
     text description
     string image
-    timestamps
+    datetime created_at
+    datetime updated_at
   }
   IMAGES {
     int id
     string url
     int catalog_id
-    timestamps
+    datetime created_at
+    datetime updated_at
   }
   CATALOGS ||--o{ IMAGES : has
 ```
@@ -74,27 +82,43 @@ erDiagram
 
 ## 🛠️ Tech Stack
 
-- **Laravel**: PHP framework for building the application.
-- **MySQL**: Relational database management system.
-- **Composer**: Dependency manager for PHP.
+- **Backend:** Laravel (PHP 8.x)
+- **Database:** MySQL / MariaDB
+- **Frontend:** Blade, HTML5, CSS3, JS
+- **Package Manager:** Composer
 
 ---
 
-## 📦 Installation
+## ⚡ Installation
 
-1. Clone the repository
-2. Install dependencies: `composer install`
-3. Set up environment file: `cp .env.example .env`
-4. Generate application key: `php artisan key:generate`
-5. Run migrations: `php artisan migrate`
-6. Start the server: `php artisan serve`
+```bash
+# 1. Clone the repository
+git clone https://github.com/yourusername/maktabk.git
+
+# 2. Install dependencies
+composer install
+
+# 3. Set up environment
+cp .env.example .env
+
+# 4. Generate app key
+php artisan key:generate
+
+# 5. Run migrations
+php artisan migrate
+
+# 6. Start the server
+php artisan serve
+```
 
 ---
 
 ## 🤝 Contributing
-Please read our contributing guidelines before submitting pull requests.
+
+We welcome contributions! Please read our contributing guidelines before submitting a pull request.
 
 ---
 
 ## 📜 License
-This project is licensed under the MIT License.
+
+MIT License © 2025 Maktabk Team
