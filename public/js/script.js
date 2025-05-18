@@ -89,3 +89,10 @@ window.addEventListener("scroll", function () {
     }
 });
 
+// quantity handler
+function adjustQuantity(change) {
+    const quantityInput = document.getElementById("quantity");
+    let currentValue = parseInt(quantityInput.value) || 1;
+    currentValue += change;
+    quantityInput.value = Math.max(1, currentValue); // Minimum quantity 1
+}

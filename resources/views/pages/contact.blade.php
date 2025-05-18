@@ -11,7 +11,20 @@
         <!-- Contact form -->
         <section class="contact-form-section">
             <div class="container">
+                @if(session('success'))
+                    <div class="alert alert-success" id="alert-message">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
+                @if(session('error'))
+                    <div class="alert alert-danger" id="alert-message">
+                        {{ session('error') }}
+                    </div>
+                @endif
+
                 <form action="/contact" method="post" class="contact-form">
+                    @csrf
                     <div class="form-group-row">
                         <div class="form-group">
                             <label for="contact-name">Name *</label>
@@ -35,4 +48,19 @@
             </div>
         </section>
     </main>
+
+    <script>
+        // Function to hide alert messages after 4 seconds
+        document.addEventListener('DOMContentLoaded', function() {
+            const alertMessage = document.getElementById('alert-message');
+            if (alertMessage) {
+                setTimeout(function() {
+                    alertMessage.style.opacity = '0';
+                    setTimeout(function() {
+                        alertMessage.style.display = 'none';
+                    }, 300);
+                }, 4000);
+            }
+        });
+    </script>
 @endsection

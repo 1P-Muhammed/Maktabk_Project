@@ -41,7 +41,7 @@
                             قاعدة معدن مستوردة
                         </p>
                         <p class="price">LE 1,599.00 <s>LE 2,000.00</s></p>
-                        <a class="button" href="{{ route('product_details') }}" class="btn">
+                        <a class="button" href="{{ route('product_details', 1) }}" class="btn">
                             <i class="fa-solid fa-cart-plus"></i> Add to Cart
                         </a>
                     </div>

@@ -93,7 +93,8 @@
     flex: 1 1 55%;
     padding: 0.5rem;
     min-width: 55%;
-    height: 50rem;
+    height: fit-content;
+    min-height: 55rem;
 }
 
 .main-image {
@@ -103,13 +104,13 @@
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
-    overflow: hidden;
+    overflow-y: hidden;
     transition: opacity 0.5s ease;
 }
 
 .main-image img {
-    width: 40rem;
-    height: 40rem;
+    width: 100%;
+    height: auto;
     border-radius: 0.5rem;
     object-fit: cover;
     object-position: center;
@@ -130,7 +131,9 @@
     flex-direction: row;
     gap: 1rem;
     margin-top: 0.5rem;
+    padding: 1rem;
     overflow-x: scroll;
+    overflow-y: visible;
 }
 
 .product-images img {
@@ -187,6 +190,14 @@
     color: #cccccc;
 }
 
+#quantity{
+    width: 3rem;
+    padding: 0.4rem;
+    text-align: center;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
 .Quantity-p {
     font-size: 1rem !important;
     cursor: pointer;
@@ -218,15 +229,7 @@
 }
 
 .product-details button {
-    background-color: #e22120;
-    color: #ffffff;
-    border: none;
-    padding: 1rem 1rem;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    margin-top: 2%;
-    border-radius: 0.5rem;
+    width: 100%;
 }
 
 .product-full-details {
@@ -559,11 +562,42 @@
 
     .product-container{
         height: 30rem;
+        min-height: auto;
     }
 
     .main-image img{
         width: 20rem;
         height: 20rem;
     }
+
+    .overview{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .overview div img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
 }
 
