@@ -1,124 +1,87 @@
-# Maktabk E-commerce Application
+<h1 align="center">
+  <img src="https://img.icons8.com/ios-filled/100/000000/office-chair.png" width="60" alt="Maktabk Logo" />
+  <br />
+  <b>Maktabk</b>
+  <br />
+  <small>Modern Office Furniture E-commerce</small>
+</h1>
 
-## Overview
-Maktabk is an e-commerce platform specializing in office furniture, particularly chairs. The application is built using Laravel and provides a seamless shopping experience for customers.
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#pages">Pages</a> •
+  <a href="#tech-stack">Tech Stack</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#contributing">Contributing</a>
+</p>
 
-## Page Specifications
+---
 
-### 1. Home Page (`/`)
-- Hero section with video background
-- Welcome section with featured product
-- Product preview with image gallery
-- Features section highlighting key benefits
+## 🚀 Overview
 
-### 2. Catalog Page (`/catalog`)
-- Grid display of all products
-- Each product card shows:
-  - Product image
-  - Product name
-  - Discounted price (LE)
-  - Original price (strikethrough)
-  - "Buy" button
-- Save amount indicator for discounted items
+**Maktabk** is a modern, responsive e-commerce platform focused on office furniture—especially chairs! Built with Laravel, it delivers a seamless, stylish shopping experience with a focus on usability and performance.
 
-### 3. Product Details Page (`/product/{id}`)
-- Large product image with thumbnail gallery
-- Product name
-- Pricing information:
-  - Discounted price
-  - Original price (strikethrough)
-- Quantity selector
-- Add to Cart button
-- Product description
-- Customer reviews section
-- Promotional section with warranty information
+---
 
-### 4. Cart Page (`/cart`)
-- Order summary section
-- Product list showing:
-  - Product image
-  - Product name
-  - Quantity selector
-  - Price (using discounted price)
-  - Remove button
-- Total calculation
-- Empty cart state handling
+## ✨ Features
 
-### 5. Search Page (`/search`)
-- Search input field
-- Results display similar to catalog page
-- "No results found" state
-- Each result shows:
-  - Product image
-  - Product name
-  - Discounted price
-  - Original price
-  - Add to Cart button
+- 🛒 **Session-based Cart**: Add, update, and remove items with real-time price updates.
+- 💸 **Discounts & Savings**: Clear price display with discount indicators and savings calculation.
+- 📦 **Product Management**: Multiple images, detailed descriptions, and easy catalog browsing.
+- 🔍 **Smart Search**: Fast, relevant product search with instant results.
+- 📧 **Email Notifications**: Order confirmations and contact form emails with beautiful templates.
+- 🌐 **RTL & Responsive**: Fully responsive and RTL-ready for a global audience.
+- 🎨 **Modern UI**: Clean design, smooth hover effects, and a delightful user experience.
 
-### 6. Contact Page (`/contact`)
-- Contact form
-- Contact information display
+---
 
-## Features
+## 🖥️ Pages
 
-### Cart System
-- Session-based cart management
-- Add to cart functionality
-- Update quantity
-- Remove items
-- Price calculations using discounted prices
-- Cart total updates
+| Page                | Description                                                                                 |
+|---------------------|---------------------------------------------------------------------------------------------|
+| **Home** `/`        | Hero video, featured product, image gallery, and key benefits                               |
+| **Catalog** `/catalog` | Product grid with images, prices, discounts, and "Buy" buttons                        |
+| **Product** `/product/{id}` | Large gallery, pricing, quantity selector, reviews, and warranty info           |
+| **Cart** `/cart`    | Order summary, editable product list, total calculation, and empty cart state               |
+| **Search** `/search`| Instant search, results grid, and "No results found" state                                  |
+| **Contact** `/contact` | Contact form and company info                                                          |
+| **Checkout** `/checkout` | Secure checkout process                                                             |
 
-### Product Management
-- Product catalog with images
-- Price management (regular and discount prices)
-- Product details with multiple images
-- Product search functionality
+---
 
-### User Interface
-- Responsive design
-- RTL (Right-to-Left) support
-- Modern UI with hover effects
-- Clear price display with discount indicators
+## 🗄️ Database Structure
 
-### Email Notifications
-- Order confirmation emails
-- Contact form submission emails
-- Email templates with order details
+```mermaid
+erDiagram
+  CATALOGS {
+    int id
+    string name
+    decimal price
+    decimal discount_price
+    text description
+    string image
+    timestamps
+  }
+  IMAGES {
+    int id
+    string url
+    int catalog_id
+    timestamps
+  }
+  CATALOGS ||--o{ IMAGES : has
+```
 
-## Technical Specifications
+---
 
-### Database Structure
-- Catalogs table:
-  - id
-  - name
-  - price
-  - discount_price
-  - description
-  - image
-  - timestamps
+## 🛠️ Tech Stack
 
-- Images table:
-  - id
-  - url
-  - catalog_id (foreign key)
-  - timestamps
+- **Laravel**: PHP framework for building the application.
+- **MySQL**: Relational database management system.
+- **Composer**: Dependency manager for PHP.
 
-### Routes
-- Home: `/`
-- Catalog: `/catalog`
-- Product Details: `/product/{id}`
-- Cart: `/cart`
-- Search: `/search`
-- Contact: `/contact`
-- Checkout: `/checkout`
+---
 
-### Authentication
-- Registration
-- Login
-- Logout
+## 📦 Installation
 
-## Installation
 1. Clone the repository
 2. Install dependencies: `composer install`
 3. Set up environment file: `cp .env.example .env`
@@ -126,14 +89,12 @@ Maktabk is an e-commerce platform specializing in office furniture, particularly
 5. Run migrations: `php artisan migrate`
 6. Start the server: `php artisan serve`
 
-## Dependencies
-- Laravel Framework
-- PHP 8.x
-- MySQL/MariaDB
-- Composer
+---
 
-## Contributing
+## 🤝 Contributing
 Please read our contributing guidelines before submitting pull requests.
 
-## License
+---
+
+## 📜 License
 This project is licensed under the MIT License.
