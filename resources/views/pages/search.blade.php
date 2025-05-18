@@ -24,12 +24,12 @@
                         @foreach($catalogs as $catalog)
                             <div class="catalog-item">
                                 <div class="catalog-img-container">
-                                    <img src="{{ $catalog->image }}" alt="{{ $catalog->name }}" />
+                                    <img src="/{{ $catalog->image }}" alt="{{ $catalog->name }}" />
 
                                     @php
                                         // Remove any non-numeric characters and convert to float
-                                        $original = floatval(preg_replace('/[^\d.]/', '', $catalog->price));
-                                        $discount = floatval(preg_replace('/[^\d.]/', '', $catalog->discount_price));
+                                        $original = floatval(preg_replace('/[^\d.]/', '', $catalog->discount_price));
+                                        $discount = floatval(preg_replace('/[^\d.]/', '', $catalog->price));
                                         $savings = $original - $discount;
                                     @endphp
 
@@ -42,10 +42,14 @@
                                 <div class="catalog-item-info">
                                     <h2>{{ $catalog->name }}</h2>
                                     <div class="catalog-price-container">
-                                        <p>LE {{ $catalog->discount_price}}</p>
-                                        <p class="price">LE {{ $catalog->price}}</p>
+                                        <p>LE {{ $catalog->price}}</p>
+                                        <p class="price">LE {{ $catalog->discount_price}}</p>
                                     </div>
-                                    <a href="{{ route('product_details') }}" class="button">Add to Cart</a>
+                                    <form action="{{ route('cart.add') }}" method="POST">
+    @csrf
+    <input type="hidden" name="product_id" value="{{ $catalog->id }}">
+    <button type="submit" class="button">Add to Cart</button>
+</form>
                                 </div>
                             </div>
                         @endforeach

@@ -17,7 +17,7 @@
         <nav>
             <div class="nav-container">
                 <i id="menu" class="fa-solid fa-bars"></i>
-                <a class="logo-link" href="{{ route('home') }}"><img src="images/logo.png" alt="Logo"
+                <a class="logo-link" href="{{ route('home') }}"><img src="/images/logo.png" alt="Logo"
                         class="logo" /></a>
                 <div class="nav-links">
                     <a class="profile" href="#">
@@ -37,7 +37,7 @@
                         </div>
                     </a>
                     <a class="cart-icon" href="{{ route('cart') }}"><i class="fa-solid fa-cart-shopping">
-                            <P class="cart-quantity-counter">{{ '0' }}</P>
+                            <p class="cart-quantity-counter">{{ $cartQuantity }}</p>
                         </i></a>
                 </div>
             </div>
@@ -62,8 +62,7 @@
                     @auth
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <a href="#" class="abutton"
-                                onclick="event.preventDefault(); this.closest('form').submit();">
+                            <a href="#" class="abutton" onclick="event.preventDefault(); this.closest('form').submit();">
                                 <i class="fa-solid fa-right-from-bracket"></i> Logout
                             </a>
                         </form>

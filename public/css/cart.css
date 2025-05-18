@@ -7,9 +7,8 @@
     --clr-shadow: rgba(0, 0, 0, 0.201);
 }
 
-html{
+html {
     overflow-x: hidden;
-
 }
 
 body {
@@ -82,32 +81,29 @@ form select {
     border-radius: 4px;
 }
 
-button {
-    margin-top: 1rem;
+button{
     width: 100%;
-    padding: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.btn-remove {
+    background: transparent;
     border: none;
-    border-radius: 4px;
-    background: var(--accent);
-    color: #fff;
-    font-size: 1rem;
+    color: #c00;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: background 0.2s;
+    width: fit-content;
+    margin: 0 auto;
 }
 
-button:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-}
-
-button:not(:disabled):hover {
-    background: #d35400;
+.btn-remove:hover{
+    color: #900;
 }
 
 .cart-header,
 .cart-items li {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
     gap: 0.5rem;
     align-items: center;
     text-align: center;
@@ -163,16 +159,16 @@ button:not(:disabled):hover {
 @media screen and (max-width: 540px) {
     /* 1. Hide the header row so each item stands alone */
     .cart-header {
-      display: none;
+        display: none;
     }
 
     /* 2. Make each <li> a one‑column grid (i.e. vertical stack) */
     .cart-items li {
-      display: grid;
-      grid-template-columns: 1fr; /* single column */
-      grid-auto-rows: auto;
-      row-gap: 0.75rem;
-      padding: 0.75rem 0;
+        display: grid;
+        grid-template-columns: 1fr; /* single column */
+        grid-auto-rows: auto;
+        row-gap: 0.75rem;
+        padding: 0.75rem 0;
     }
 
     /* 3. Ensure image, description, qty-control, and price each occupy full width */
@@ -180,20 +176,20 @@ button:not(:disabled):hover {
     .cart-items li span,
     .cart-items li .quantity-control,
     .cart-items li .line-total {
-      grid-column: 1;
-      width: 100%;
+        grid-column: 1;
+        width: 100%;
     }
 
     /* 4. Center the product image in its row */
     .cart-items li img {
-      justify-self: center;
+        justify-self: center;
     }
 
     /* 5. Stack the cost summary vertically */
     .cost-summary {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
     }
-  }
+}
