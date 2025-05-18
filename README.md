@@ -1,6 +1,4 @@
 <h1 align="center">
-  <img src="https://img.icons8.com/ios-filled/100/000000/office-chair.png" width="60" alt="Maktabk Logo" />
-  <br />
   <b>Maktabk</b>
   <br />
   <small>Modern Office Furniture E-commerce</small>
@@ -17,7 +15,6 @@
   <a href="#-pages">Pages</a> •
   <a href="#-tech-stack">Tech Stack</a> •
   <a href="#-installation">Installation</a> •
-  <a href="#-contributing">Contributing</a>
 </p>
 
 ---
@@ -110,12 +107,6 @@ php artisan migrate
 # 6. Start the server
 php artisan serve
 ```
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Please read our contributing guidelines before submitting a pull request.
 
 ---
 
